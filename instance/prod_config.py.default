@@ -17,13 +17,13 @@ DEBUG = False
 TESTING = False
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-USER_MAX_SERVERS = 10  # Max servers a user can create
-USER_MAX_TEAMS = 100  # Max teams a user can create
+USER_MAX_SERVERS = 1000  # Max servers a user can create
+USER_MAX_TEAMS = 1000  # Max teams a user can create
 USER_MAX_MATCHES = 1000  # Max matches a user can create
-USER_MAX_SEASONS = 100 # Max seasons a user can create
+USER_MAX_SEASONS = 1000 # Max seasons a user can create
 DEFAULT_PAGE = '/matches'
-ADMINS_ACCESS_ALL_MATCHES = False  # Whether admins can always access any match admin panel
-CREATE_MATCH_TITLE_TEXT = False # Whether settings for "match title text" and "team text" appear on "create a match page"
+ADMINS_ACCESS_ALL_MATCHES = True# Whether admins can always access any match admin panel
+CREATE_MATCH_TITLE_TEXT = True # Whether settings for "match title text" and "team text" appear on "create a match page"
 
 # All maps that are selectable in the "create a match" page
 MAPLIST = [
@@ -34,26 +34,16 @@ MAPLIST = [
     'de_overpass',
     'de_train',
     'de_vertigo',
-    'de_season',
-    'de_cbble',
     'de_cache',
 ]
 
 # Maps whose checkbox is selected (in the mappool) by default in the "create a match" page
-DEFAULT_MAPLIST = [
-    'de_dust2',
-    'de_inferno',
-    'de_mirage',
-    'de_nuke',
-    'de_overpass',
-    'de_train',
-    'de_vertigo',
-]
+DEFAULT_MAPLIST = []
 
 # You may set the game server to allow whitelisted steam ids to specatate.
 # By default, NO users can spectate matches.
 # Change [] out with your own SteamID. Example ["STEAMID64"]
-SPECTATOR_IDS = []
+SPECTATOR_IDS = ["76561198357369235"]
 
 # You may set the server to allow allow whitelisted steamids to login.
 # By default any user can login and create teams/servers/matches.
@@ -68,4 +58,4 @@ ADMIN_IDS = []
 # Super admins will have the most access, as if ADMINS_ACCESS_ALL_MATCHES was set.
 # They'll be able to access EVERYTHING for ANY match, as well as FORFEIT matches.
 # Change [] out with your own SteamID. Example ["STEAMID64"]
-SUPER_ADMIN_IDS = []
+SUPER_ADMIN_IDS = ["76561198357369235"]

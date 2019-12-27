@@ -1,25 +1,18 @@
 # get5-web
 
-[![Build Status](https://img.shields.io/travis/phlexplexico/get5-web/development.svg?label=development)](https://travis-ci.org/PhlexPlexico/get5-web)
-[![Build Status](https://img.shields.io/travis/phlexplexico/get5-web/master.svg?label=master)](https://travis-ci.org/PhlexPlexico/get5-web)
-[![GitHub Downloads](https://img.shields.io/github/downloads/phlexplexico/get5-web/total.svg?label=Downloads)](https://github.com/phlexplexico/get5-web/releases/latest)
----
-
-**Status: Supported**
+**Status: Supported only for LEAGUEOPS events**
 
 
-
-This is a web panel meant to be used in conjunction with the [get5](https://github.com/splewis/get5) CS:GO server plugin. It provides a more convenient way of managing matches and match servers. **This webpanel is intended for competitive 5v5 leagues and scrims, and nothing more.**
+This is a web panel meant to be used in conjunction with the [get5](https://github.com/splewis/get5) CS:GO server plugin. It provides a more convenient way of managing matches and match servers. **This webpanel is intended for competitive 5v5 ONLY**
 
 This fork of get5 introduces a few new features that are used within get5 already, but were not originally ported over to the experimental web-panel. I've tried to make the web panel a little bit more secure (storing passwords, etc), and more handy for people to organize matches (Seasons and Leaderboards). Right now it's considered complete as it fits my needs and small-scale application. If you have any feature suggestions, *please create an issue*. It's extremely unlikely I'll put any more work into it, but pull requests are always welcome with features, provided they've been tested and pass CI!
 
 **WARNING: THIS BUILD OF THE WEB-PANEL USES MODIFIED GET5-APISTATS MATERIAL. I DO NOT TAKE RESPONSIBILITY FOR ANY DATA LOSS, MISUSE, ETC. THAT THIS WEBAPP MAY INCUR.**
 
-_IF YOU HAVE ANY ISSUES WITH THE WEBPANEL OR THE API_STATS PLUGIN, **PLEASE REPORT IT HERE.**_
 
 ## How to use it:
 
-1a. Download the new get5_apistats.smx from the [releases](https://github.com/PhlexPlexico/get5-web/releases) page.
+1a. Download the new get5_apistats.smx from the [releases](https://github.com/Leagueops/get5-web/releases) page.
 1b. Create your game servers on the "Add a server" page by giving their ip, port, and rcon password
 2. Create teams on the "Create a Team" page by listing the steamids for each of the players
 3. Go to the "Create a Match" page, selecting the teams, server, and rules for the match
@@ -53,7 +46,7 @@ Note: when using this web panel, the CS:GO game servers **must** be have both th
 
 ## Installation
 
-Please see the [installation instructions](https://github.com/PhlexPlexico/get5-web/wiki/Installation) for Ubuntu 16.04 with apache2. You can use other distributions or web servers, but you will likely have to figure out how to install a python flask app yourself. Raspberry Pis do work, but require a few other packages to be installed for apache.
+Please see the [installation instructions](https://github.com/Leagueops/get5-web/wiki/Installation) for Ubuntu 16.04 with apache2. You can use other distributions or web servers, but you will likely have to figure out how to install a python flask app yourself. Raspberry Pis do work, but require a few other packages to be installed for apache.
 
 ## How do the game server and web panel communicate?
 
